@@ -21,9 +21,9 @@ OldPhoneAppraised: number;
   constructor(public navCtrl: NavController) {}
     calculateOldPhoneAppraisedValue(){
     this.OldPhoneAppraisedValue = (this.FinancedAmount*this.InterestRate)*this.PaymentTerms;
-    this.OldPhoneAppraisedValue = parseFloat(this.OldPhoneAppraised.toFixed(1));
+    this.OldPhoneAppraisedValue = parseFloat(this.OldPhoneAppraisedValue.toFixed(1));
 
-    if (this.OldPhoneAppraised <4000) {
+    if (this.OldPhoneAppraised <4000.00) {
       this.OldPhoneAppraisedValueMessage = "Old Phone Appraised Value";
     
     }
@@ -32,7 +32,7 @@ OldPhoneAppraised: number;
     this.FinancedAmount = this.Gadget - this.OldPhone;
     this.FinancedAmount = parseFloat(this.FinancedAmount.toFixed(2));
 
-    if (this.FinancedAmount <26000) {
+    if (this.FinancedAmount <26000.00) {
       this.FinancedAmountMessage = "Financed Amount";
     }
     }
