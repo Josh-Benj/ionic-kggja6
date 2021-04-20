@@ -10,34 +10,41 @@ export class HomePage {
   Gadget: number;
   OldPhone: number;
   Financed: number;
-  bmi: number;
-  bmiMessage: string;
- any;
-InterestRate: 1.30;
+  OldPhoneAppraised: number;
+  OldPhoneAppraisedMessage: string;
+  FinancedAmount: number;
+  FinancedAmountMessage: string;
+ any: any;
+InterestRate: number;
 PaymentTerms: number;
   
   constructor(public navCtrl: NavController) {}
-
-  calculateFinancialAmount(){
-    this.bmi = (this.Financed*this.InterestRate/100)*this.PaymentTerms;
-    this.bmi = parseFloat(this.bmi.toFixed(1));
-    this.bmi = this.Gadget - this.OldPhone;
-    this.bmi = parseFloat(this.bmi.toFixed(2));
+calculateOldPhoneAppraised(){
+    this.OldPhoneAppraised = (this.Financed*this.InterestRate/100)*this.PaymentTerms;
+    this.OldPhoneAppraised = parseFloat(this.OldPhoneAppraised.toFixed(1));
+    
    
-    if (this.bmi <18.5) {
-      this.bmiMessage = "Old Appraised Value";
-    } else if (this.bmi > 18.5 && this.bmi < 25) {
-      this.bmiMessage = "Financed Amount";
-    }else if (this.bmi >= 25 && this.bmi < 30) {
-      this.bmiMessage = "Monthly Payment";
-    }else if (this.bmi >= 25 && this.bmi < 30) {
-      this.bmiMessage = "Old Appraised Value";
-    } else {
-      this.bmiMessage = "Financed Amount";
-   {
-      this.bmiMessage ="Monthly Payment;"
+    if (this.OldPhoneAppraised <18.5) {
+      this.OldPhoneAppraisedMessage = "Old Appraised Value";
+    } else if (this.OldPhoneAppraised > 18.5 && this.OldPhoneAppraised < 25) {
+      
+      this.OldPhoneAppraisedMessage = "Old Appraised Value";
+    } 
+    
+          
+    
+}
+  calculateFinancedAmount(){
+    this.FinancedAmount = this.Gadget - this.OldPhone;
+    this.FinancedAmount = parseFloat(this.FinancedAmount.toFixed(2));
+   
+   if (this.FinancedAmount <18.5) {
+      this.FinancedAmountMessage = "Underweight";
+    } else if (this.FinancedAmount > 18.5 && this.FinancedAmount < 25) {
+      this.FinancedAmountMessage = "Normal";
+    }else if (this.FinancedAmount >= 25 && this.FinancedAmount < 30) {
     }
-    }
+      
       
       
     
