@@ -32,14 +32,14 @@ src="https://cdn.jsdelivr.net/gh/Josh-Benj/ionic-kggja6@master/home-credit-trade
   <ion-label>Payment Terms:</ion-label>  
  <ion-input type="number" [(ngModel)]="payment"></ion-input>
 </ion-item>
-<button ion-button color="tertiary" (click)="calculateOldPhoneAppraised();calculateFinancialAmount()">
+<button ion-button color="tertiary" (click)="calculateOldPhoneAppraised();calculateFinancedAmount()">
   CALCULATE
   </button>
    <ion-item *ngIf="OldPhoneAppraised">
     <h2>Old Phone Appraised: {{OldPhoneAppraised}} <code> ({{OldPhoneAppraisedMessage}})</code></h2>
   </ion-item>
-  <ion-item *ngIf="FinancialAccount">
-    <h2>Financial Amount: {{FinancialAmount}} <code> ({{FinancialAmountMessage}})</code></h2>
+  <ion-item *ngIf="FinancedAccount">
+    <h2>Financed Amount: {{FinancedAmount}} <code> ({{FinancedAmountMessage}})</code></h2>
   </ion-item>
    
   </p>
