@@ -9,20 +9,20 @@ import { NavController } from 'ionic-angular';
 export class HomePage {
   Gadget: number;
   OldPhone: number;
-  bmi: number;
-  bmiMessage: string;
+  FinancialAccount: number;
+  FinancialAccountMessage: string;
   
   constructor(public navCtrl: NavController) {}
 
-  calculateBMI(){
-    this.bmi = this.Gadget - this.OldPhone;
-    this.bmi = parseFloat(this.bmi.toFixed(2));
+  calculateFinancialAccount(){
+    this.FinancialAccount = this.Gadget - this.OldPhone;
+    this.FinancialAccount = parseFloat(this.FinancialAccount.toFixed(2));
 
-    if (this.bmi <18.5) {
-      this.bmiMessage = "Old Phone Appraised Value";
-    } else if (this.bmi > 18.5 && this.bmi < 25) {
-      this.bmiMessage = "Financed Amount";
-    }else if (this.bmi >= 25 && this.bmi < 30) {
+    if (this.FinancialAccount <18.5) {
+      this.FinancialAccountMessage = "Old Phone Appraised Value";
+    } else if (this.FinancialAccount > 18.5 && this.FinancialAccount < 25) {
+      this.FinancialAccountMessage = "Financed Amount";
+    }else if (this.FinancialAccount >= 25 && this.FinancialAccount < 30) {
     }
       
       

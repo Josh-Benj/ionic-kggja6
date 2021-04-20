@@ -32,12 +32,12 @@ src="https://cdn.jsdelivr.net/gh/Josh-Benj/ionic-kggja6@master/home-credit-trade
   <ion-label>Payment Terms:</ion-label>  
  <ion-input type="number" [(ngModel)]="payment"></ion-input>
 </ion-item>
-<button ion-button color="tertiary" (click)="calculateBMI()">
+<button ion-button color="tertiary" (click)="calculateFinancialAccount()">
   CALCULATE
   </button>
  
-  <ion-item *ngIf="bmi">
-    <h2>Financial Account: {{bmi}} <code> ({{bmiMessage}})</code></h2>
+  <ion-item *ngIf="FinancialAccount">
+    <h2>Financial Account: {{FinancialAccount}} <code> ({{FinancialAccountMessage}})</code></h2>
   </ion-item>
   </p>
 
