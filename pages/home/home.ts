@@ -7,48 +7,24 @@ import { NavController } from 'ionic-angular';
   styleUrls: ['home.css']
 })
 export class HomePage {
-  Gadget: number;
-  OldPhone: number;
-  Financed: number;
-  InterestRate: 1.30;
-  PaymentTerms: number;
-  OldPhoneAppraised: number;
-  OldPhoneAppraisedMessage: string;
-  FinancedAmount: number;
-  FinancedAmountMessage: string;
- 
-
-
-
+  height: number;
+  weight: number;
+  bmi: number;
+  bmiMessage: string;
   
   constructor(public navCtrl: NavController) {}
-calculateOldPhoneAppraised(){
-    this.OldPhoneAppraised = (this.Financed*this.InterestRate/100)*this.PaymentTerms;
-    this.OldPhoneAppraised = parseFloat(this.OldPhoneAppraised.toFixed(1));
-    
-   
-    if (this.OldPhoneAppraised <18.5) {
-      this.OldPhoneAppraisedMessage = "Old Appraised Value";
-    } else if (this.OldPhoneAppraised > 18.5 && this.OldPhoneAppraised < 25) {
-      this.OldPhoneAppraisedMessage = "OldPhoneAppraised";
-    }else if (this.OldPhoneAppraised >= 25 && this.OldPhoneAppraised< 30) {
-    }
-      
-    
-          
-    
-}
-  calculateFinancedAmount(){
-    this.FinancedAmount = this.Gadget - this.OldPhone;
-    this.FinancedAmount = parseFloat(this.FinancedAmount.toFixed(2));
-   
-   if (this.FinancedAmount <18.5) {
-      this.FinancedAmountMessage = "FinancedAmount";
-    } else if (this.FinancedAmount > 18.5 && this.FinancedAmount < 25) {
-      this.FinancedAmountMessage = "FinancedAmount";
-    }else if (this.FinancedAmount >= 25 && this.FinancedAmount < 30) {
-    }
-      
+
+  calculateBMI(){
+    this.bmi = this.weight / (this.height * this.height);
+    this.bmi = parseFloat(this.bmi.toFixed(2));
+
+    if (this.bmi <18.5) {
+      this.bmiMessage = "Old Phone Appraised Value";
+    } else if (this.bmi > 18.5 && this.bmi < 25) {
+      this.bmiMessage = "Financed Amount";
+    }else if (this.bmi >= 25 && this.bmi < 30) {
+      this.bmiMessage = "Monthly Payment";
+    } 
       
       
     
