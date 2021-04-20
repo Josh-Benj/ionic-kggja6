@@ -17,6 +17,8 @@ export class HomePage {
  any: any;
 InterestRate: number;
 PaymentTerms: number;
+
+
   
   constructor(public navCtrl: NavController) {}
 calculateOldPhoneAppraised(){
@@ -27,9 +29,10 @@ calculateOldPhoneAppraised(){
     if (this.OldPhoneAppraised <18.5) {
       this.OldPhoneAppraisedMessage = "Old Appraised Value";
     } else if (this.OldPhoneAppraised > 18.5 && this.OldPhoneAppraised < 25) {
+      this.OldPhoneAppraisedMessage = "OldPhoneAppraised";
+    }else if (this.OldPhoneAppraised >= 25 && this.OldPhoneAppraised< 30) {
+    }
       
-      this.OldPhoneAppraisedMessage = "Old Appraised Value";
-    } 
     
           
     
@@ -39,9 +42,9 @@ calculateOldPhoneAppraised(){
     this.FinancedAmount = parseFloat(this.FinancedAmount.toFixed(2));
    
    if (this.FinancedAmount <18.5) {
-      this.FinancedAmountMessage = "Underweight";
+      this.FinancedAmountMessage = "FinancedAmount";
     } else if (this.FinancedAmount > 18.5 && this.FinancedAmount < 25) {
-      this.FinancedAmountMessage = "Normal";
+      this.FinancedAmountMessage = "FinancedAmount";
     }else if (this.FinancedAmount >= 25 && this.FinancedAmount < 30) {
     }
       
