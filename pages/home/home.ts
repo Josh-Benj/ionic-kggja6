@@ -13,6 +13,8 @@ export class HomePage {
   FinancedAmountMessage: string;
   OldPhoneAppraised: number;
   OldPhoneAppraisedMessage: string;
+  MonthlyPayment: number;
+  MonthlyPaymentMessage: string;
 InterestRate: any;
 PaymentTerms: number;
   constructor(public navCtrl: NavController) {}
@@ -31,11 +33,14 @@ PaymentTerms: number;
 
     if (this.FinancedAmount <18.5) {
       this.FinancedAmountMessage = "Financed Amount";
-    
     }
-  }
-  
+    }
+    calculateMonthlyPayment(){
+    this.MonthlyPayment = this.Gadget - this.OldPhone;
+    this.MonthlyPayment = parseFloat(this.MonthlyPayment.toFixed(3));
 
-      
-    
+    if (this.MonthlyPayment <18.5) {
+      this.MonthlyPaymentMessage = "Monthly Payment";
+}
+    }
 }
