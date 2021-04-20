@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Trade to Upgrade Loan Calculator</h2>
+  <p>
+    There's no "perfect weight" that fits everyone. BMI, or body mass index, measures how healthy your weight is based on how tall you are. It gives you a clue to your risk for weight-related health problems.
+  </p>
+  <p>
+     <a> Source: https://www.webmd.com </a>
+
+  </p>
+
+  <p>
+<img
+src="https://cdn.jsdelivr.net/gh/Josh-Benj/BMI-Calculator@master/173960889_529819511724716_6881490481318186488_n.jpg">
+    
+   <ion-item>
+  <ion-label>Old Phone Appraised Value:</ion-label>  
+ <ion-input type="number" [(ngModel)]="height"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label>Financial Amount:</ion-label>  
+ <ion-input type="number" [(ngModel)]="weight"></ion-input>
+</ion-item>
+
+<button ion-button color="tertiary" (click)="calculateBMI()">
+  CALCULATE
+  </button>
+ 
+  <ion-item *ngIf="bmi">
+    <h2>Your Monthly Payment is: {{bmi}} <code> ({{bmiMessage}})</code></h2>
+  </ion-item>
+  </p>
