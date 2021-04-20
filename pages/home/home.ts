@@ -9,23 +9,37 @@ import { NavController } from 'ionic-angular';
 export class HomePage {
   Gadget: number;
   OldPhone: number;
-  FinancialAccount: number;
-  FinancialAccountMessage: string;
-  
+  FinancialAmount: number;
+  FinancialAmountMessage: string;
+  OldPhoneAppraised: number;
+  OldPhoneAppraisedMessage: string;
+InterestRate: any;
+PaymentTerms: number;
   constructor(public navCtrl: NavController) {}
 
-  calculateFinancialAccount(){
-    this.FinancialAccount = this.Gadget - this.OldPhone;
-    this.FinancialAccount = parseFloat(this.FinancialAccount.toFixed(2));
+  calculateFinancialAmount(){
+    this.FinancialAmount = this.Gadget - this.OldPhone;
+    this.FinancialAmount = parseFloat(this.FinancialAmount.toFixed(2));
 
-    if (this.FinancialAccount <18.5) {
-      this.FinancialAccountMessage = "Old Phone Appraised Value";
-    } else if (this.FinancialAccount > 18.5 && this.FinancialAccount < 25) {
-      this.FinancialAccountMessage = "Financed Amount";
-    }else if (this.FinancialAccount >= 25 && this.FinancialAccount < 30) {
+    if (this.FinancialAmount <18.5) {
+      this.FinancialAmountMessage = "Old Phone Appraised Value";
+    } else if (this.FinancialAmount > 18.5 && this.FinancialAmount < 25) {
+      this.FinancialAmountMessage = "Financed Amount";
+    }else if (this.FinancialAmount >= 25 && this.FinancialAmount < 30) {
     }
-      
+  }
+  
+    calculateOldPhoneAppraised(){
+    this.OldPhoneAppraised = (this.FinancialAmount*this.InterestRate)/this.PaymentTerms;
+    this.OldPhoneAppraised = parseFloat(this.FinancialAmount.toFixed(2));
+
+    if (this.OldPhoneAppraised <18.5) {
+      this.OldPhoneAppraisedMessage = "Old Phone Appraised Value";
+    } else if (this.OldPhoneAppraised > 18.5 && this.OldPhoneAppraised < 25) {
+      this.OldPhoneAppraisedMessage = "Financed Amount";
+    }else if (this.OldPhoneAppraised >= 25 && this.OldPhoneAppraised < 30) {
+    }
+    }    
       
     
-}
 }
