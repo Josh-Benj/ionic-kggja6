@@ -23,9 +23,7 @@ PaymentTerms: number;
     this.bmi = parseFloat(this.bmi.toFixed(1));
     this.bmi = this.Gadget - this.OldPhone;
     this.bmi = parseFloat(this.bmi.toFixed(2));
-    this.bmi = (this.Financed+this.InterestRate/100)/this.PaymentTerms;
-    this.bmi = parseFloat(this.bmi.toFixed(3));
-
+   
     if (this.bmi <18.5) {
       this.bmiMessage = "Old Appraised Value";
     } else if (this.bmi > 18.5 && this.bmi < 25) {
