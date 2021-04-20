@@ -7,8 +7,8 @@ import { NavController } from 'ionic-angular';
   styleUrls: ['home.css']
 })
 export class HomePage {
-  height: number;
-  weight: number;
+  Gadget: number;
+  OldPhone: number;
   bmi: number;
   bmiMessage: string;
   
@@ -23,8 +23,7 @@ export class HomePage {
     } else if (this.bmi > 18.5 && this.bmi < 25) {
       this.bmiMessage = "Financed Amount";
     }else if (this.bmi >= 25 && this.bmi < 30) {
-      this.bmiMessage = "Monthly Payment";
-    } 
+    }
       
       
     
