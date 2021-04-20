@@ -22,7 +22,7 @@ Gadget: any;
     if (this.bmi <18.5) {
       this.bmiMessage = "Financed Amount";
     } else if (this.bmi > 26) {
-      this.bmiMessage = "Total Interest Payable";
+      this.bmiMessage = "Financed Amount";
     }else if (this.bmi >= 25 && this.bmi < 30) {
       this.bmiMessage = "Overweight";
     } else {
