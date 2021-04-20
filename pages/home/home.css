@@ -1,11 +1,12 @@
 ion-content {
-  background: linear-gradient(to bottom, #c7040436, #000000b7)
+  background: linear-gradient(to bottom, #04c72e69,
+   #00000059)
 }
 h2 {
-  color: #0b0b0c
+  color: #0c0c0b
 }
 p {
-  color: #bb1414ce
+  color: #bba214
 }
 p{
   font-family:Cambria Math;
