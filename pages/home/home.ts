@@ -14,7 +14,7 @@ export class HomePage {
   OldPhoneAppraisedMessage: string;
   FinancedAmount: number;
   FinancedAmountMessage: string;
- any: any;
+ 
 InterestRate: number;
 PaymentTerms: number;
 
