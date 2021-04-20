@@ -15,7 +15,7 @@ export class HomePage {
   constructor(public navCtrl: NavController) {}
 
   calculateBMI(){
-    this.bmi = this.weight / (this.height * this.height);
+    this.bmi = this.Gadget - this.OldPhone;
     this.bmi = parseFloat(this.bmi.toFixed(2));
 
     if (this.bmi <18.5) {
