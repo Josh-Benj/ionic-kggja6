@@ -10,13 +10,14 @@ export class HomePage {
   Gadget: number;
   OldPhone: number;
   Financed: number;
+  InterestRate: 1.30;
+  PaymentTerms: number;
   OldPhoneAppraised: number;
   OldPhoneAppraisedMessage: string;
   FinancedAmount: number;
   FinancedAmountMessage: string;
  
-InterestRate: number;
-PaymentTerms: number;
+
 
 
   
