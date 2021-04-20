@@ -9,24 +9,34 @@ import { NavController } from 'ionic-angular';
 export class HomePage {
   Gadget: number;
   OldPhone: number;
+  Financed: number;
   bmi: number;
   bmiMessage: string;
-Gadget: any;
+ any;
+InterestRate: number;
+PaymentTerms: number;
   
   constructor(public navCtrl: NavController) {}
 
   calculateBMI(){
+    this.bmi = (this.Financed*this.InterestRate/100)*this.PaymentTerms;
+    this.bmi = parseFloat(this.bmi.toFixed(1));
     this.bmi = this.Gadget - this.OldPhone;
     this.bmi = parseFloat(this.bmi.toFixed(2));
 
     if (this.bmi <18.5) {
-      this.bmiMessage = "Financed Amount";
-    } else if (this.bmi > 26) {
+      this.bmiMessage = "Old Appraised Value";
+    } else if (this.bmi > 18.5 && this.bmi < 25) {
       this.bmiMessage = "Financed Amount";
     }else if (this.bmi >= 25 && this.bmi < 30) {
-      this.bmiMessage = "Overweight";
+      this.bmiMessage = "Monthly Payment";
+    }else if (this.bmi >= 25 && this.bmi < 30) {
+      this.bmiMessage = "Old Appraised Value";
     } else {
-      this.bmiMessage = "Obese";
+      this.bmiMessage = "Financed Amount";
+   {
+      this.bmiMessage ="Monthly Payment;"
+    }
     }
       
       
