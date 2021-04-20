@@ -13,7 +13,7 @@ export class HomePage {
   bmi: number;
   bmiMessage: string;
  any;
-InterestRate: number;
+InterestRate: 1.30;
 PaymentTerms: number;
   
   constructor(public navCtrl: NavController) {}
