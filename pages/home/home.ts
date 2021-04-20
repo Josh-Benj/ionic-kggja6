@@ -19,7 +19,7 @@ InterestRate: any;
 PaymentTerms: number;
   constructor(public navCtrl: NavController) {}
     calculateOldPhoneAppraised(){
-    this.OldPhoneAppraised = (this.FinancedAmount*this.InterestRate)/this.PaymentTerms;
+    this.OldPhoneAppraised = (this.FinancedAmount*this.InterestRate)*this.PaymentTerms;
     this.OldPhoneAppraised = parseFloat(this.OldPhoneAppraised.toFixed(1));
 
     if (this.OldPhoneAppraised <18.5) {
@@ -36,7 +36,7 @@ PaymentTerms: number;
     }
     }
     calculateMonthlyPayment(){
-    this.MonthlyPayment = this.Gadget - this.OldPhone;
+    this.MonthlyPayment = (this.FinancedAmount+this.InterestRate)/this.PaymentTerms;
     this.MonthlyPayment = parseFloat(this.MonthlyPayment.toFixed(3));
 
     if (this.MonthlyPayment <18.5) {
