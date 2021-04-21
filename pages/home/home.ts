@@ -17,9 +17,11 @@ export class HomePage {
 
   constructor(public navCtrl: NavController) {}
     calculateOldPhoneAppraisedValue(){
-    variables.OldPhoneAppraisedValue = (variables.FinancedAmount*variables.InterestRate)*variables.PaymentTerms;
-    variables.OldPhoneAppraisedValue = parseFloat(variables.OldPhoneAppraisedValue.toFixed(2));
+    this.opav = (this.fa*this.ir)*this.pt;
+    this.opav = parseFloat(this.opav.toFixed(2));
 
+    this.fa= this.gp-this.opav;
+    this.fa = parseFloat(this.fa.toFixed(2));
     
     }
     }    
