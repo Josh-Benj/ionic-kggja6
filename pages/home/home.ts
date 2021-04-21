@@ -7,41 +7,19 @@ import { NavController } from 'ionic-angular';
   styleUrls: ['home.css']
 })
 export class HomePage {
-  Gadget: number;
-  OldPhone: number;
-  FinancedAmount: number;
-  FinancedAmountMessage: string;
-  OldPhoneAppraisedValue: number;
-  OldPhoneAppraisedValueMessage: string;
-  MonthlyPayment: number;
-  MonthlyPaymentMessage: string;
-InterestRate: any;
-PaymentTerms: number;
-OldPhoneAppraised: number;
+  gp: number;
+  opav: number;
+  pt: number;
+  fa: number;
+  ir: number;
+  tip: number;
+  mp: number;
+
   constructor(public navCtrl: NavController) {}
     calculateOldPhoneAppraisedValue(){
-    this.OldPhoneAppraisedValue = (this.FinancedAmount*this.InterestRate)*this.PaymentTerms;
-    this.OldPhoneAppraisedValue = parseFloat(this.OldPhoneAppraisedValue.toFixed(1));
+    variables.OldPhoneAppraisedValue = (variables.FinancedAmount*variables.InterestRate)*variables.PaymentTerms;
+    variables.OldPhoneAppraisedValue = parseFloat(variables.OldPhoneAppraisedValue.toFixed(2));
 
-    if (this.OldPhoneAppraised <4000.00) {
-      this.OldPhoneAppraisedValueMessage = "Old Phone Appraised Value";
     
     }
     }    
-  calculateFinancedAmount(){
-    this.FinancedAmount = this.Gadget - this.OldPhone;
-    this.FinancedAmount = parseFloat(this.FinancedAmount.toFixed(2));
-
-    if (this.FinancedAmount <26000.00) {
-      this.FinancedAmountMessage = "Financed Amount";
-    }
-    }
-    calculateMonthlyPayment(){
-    this.MonthlyPayment = (this.FinancedAmount+this.InterestRate)/this.PaymentTerms;
-    this.MonthlyPayment = parseFloat(this.MonthlyPayment.toFixed(3));
-
-    if (this.MonthlyPayment <2504.66) {
-      this.MonthlyPaymentMessage = "Monthly Payment";
-}
-    }
-}
